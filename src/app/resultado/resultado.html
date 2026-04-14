@@ -1,0 +1,29 @@
+<h2>Resultado</h2>
+
+<p>Puntaje: {{ puntaje }}</p>
+<p>Mensaje: {{ obtenerMensaje() }}</p>
+
+<hr>
+
+<h3>Detalle de respuestas</h3>
+
+<ul>
+  <li *ngFor="let r of resultados"
+      [ngClass]="r.correcto ? 'correcto' : 'incorrecto'">
+
+    Pregunta {{ r.id }}:
+    {{ r.correcto ? 'Correcta' : 'Incorrecta' }}
+
+  </li>
+</ul>
+
+<!-- OPCIONAL -->
+<div *ngIf="erroresIds.length > 0">
+  <h3>Explicaciones</h3>
+
+  <ul>
+    <li *ngFor="let id of erroresIds">
+      Pregunta {{ id }}: {{ explicaciones[id] }}
+    </li>
+  </ul>
+</div>
