@@ -2,9 +2,10 @@ import { Component, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { Consigna } from './models/consigna';
 import { Consignaservice } from './services/consigna';
-import { CardConsigna } from './componets/card-consigna/card-consigna';
+import { CardConsigna } from './components/card-consigna/card-consigna';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
+import { Menu } from './components/menu/menu';
 
 @Component({
   selector: 'app-root',

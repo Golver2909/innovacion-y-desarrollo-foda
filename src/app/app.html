@@ -14,7 +14,7 @@
         <span>Mostrando: {{ consignas.length }}</span>
       </div>
     </div>
-
+    
     <div class="consignas-grid">
       <app-card-consigna *ngFor="let consigna of consignas" 
         [consigna]="consigna"
@@ -26,7 +26,6 @@
 
 <router-outlet />
 
-<h1 class="bg-emerald-500">¡A comenzar el proyecto!</h1>
 <main class="w-full flex justify-center">
     <app-menu></app-menu>
 </main>

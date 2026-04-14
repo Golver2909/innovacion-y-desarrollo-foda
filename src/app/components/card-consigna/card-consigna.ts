@@ -10,7 +10,7 @@ import { CommonModule } from '@angular/common';
   styleUrl: './card-consigna.css',
 })
 export class CardConsigna {
-   @Input({ required: true }) consigna!: Consigna;
+  @Input({ required: true }) consigna!: Consigna;
   @Output() toggleRespuesta = new EventEmitter<number>();
 
   onToggleRespuesta(): void {
