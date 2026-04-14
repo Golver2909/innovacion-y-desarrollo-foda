@@ -1,0 +1,13 @@
+<div class="justify-center flex flex-wrap w-full bg-gray-500 m-2 p-2 gap-2">
+    <div class="w-full text-center m-2 bg-sky-300">
+        <h1>{{mensajes[posicion]}}</h1>
+        <!-- Seccion para mostrar componente de cards -->
+    </div>
+    <div class="w-full justify-center text-center flex flex-wrap m-2 bg-amber-50">
+        @for(option of opciones;track $index){
+            <div (click)="cambiarContenido()" class="hover:bg-sky-400 border transition w-1/2 p-2 gap-2">
+                <h1>{{option}}</h1>
+            </div>
+        }
+    </div>
+</div>
