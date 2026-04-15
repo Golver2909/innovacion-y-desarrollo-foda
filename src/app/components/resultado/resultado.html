@@ -8,16 +8,22 @@
     <p><strong class="text-2xl">{{ obtenerMensaje() }}</strong></p>
 
     <div class="seccion">
-      <h3>Detalle de respuestas</h3>
 
-      <div *ngFor="let r of resultados"
-           class="item incorrecto">
+      @for(r of resultados ; track r.id){
+        <h3>Detalle de respuestas</h3>
+        <div class="item incorrecto">
 
-        Consigna: {{ r.detalle }}
-        <p class="text-white"> Respuesta correcta: <strong class="text-emerald-300">{{ r.respuesta }}</strong></p>
-        
+          Consigna: {{ r.detalle }}
+          <p class="text-white"> Respuesta correcta: <strong class="text-emerald-300">{{ r.respuesta }}</strong></p>
+          
 
-      </div>
+        </div>
+      }@empty {
+        <div class="item">
+          <p class="text-white"> ¡Has identificado con exito todos los casos! </p>
+        </div>
+      }
+      
     </div>
 
   </div>

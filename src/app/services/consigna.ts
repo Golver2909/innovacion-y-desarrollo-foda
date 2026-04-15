@@ -96,6 +96,35 @@ export class Consignaservice {
       detalle: "Food truck de poke bowls. Ingredientes frescos y baratos en la zona.",
       respuesta:"Oportunidad" /* "Agricultores locales, pescaderías mayoristas, temporada de ingredientes, menú rotativo." */,
       mostrarRespuesta: false
+    },
+    {
+      id: 16,
+      detalle: "Emprendimiento de mantenimiento de PC. No poseemos experiencia publicitaria.",
+      respuesta:"Debilidad" ,
+      mostrarRespuesta: false
+    },
+    {
+      id: 17,
+      detalle: "Clases virtuales informaticas certificadas. Tenemos la capacidad de brindar certificados validos.",
+      respuesta:"Fortaleza" ,
+      mostrarRespuesta: false
+    },
+    {
+      id: 18,
+      detalle: "Empresa de marketing digital. Crece la cantidad de anuncios creados con IA.",
+      respuesta:"Amenaza" ,
+      mostrarRespuesta: false
+    },
+    {
+      id: 19,
+      detalle: "Venta de productos TCG. Hay una reduccion de impuesto a las importaciones.",
+      respuesta:"Oportunidad" ,
+      mostrarRespuesta: false
+    },{
+      id: 20,
+      detalle: "Libreria y papeleria. Zona cercana a al menos 3 instituciones educativas.",
+      respuesta:"Debilidad" ,
+      mostrarRespuesta: false
     }
   ];
 
