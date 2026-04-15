@@ -18,9 +18,9 @@
     <div class="w-full justify-center text-center flex flex-wrap m-2 text-gray-950">
         @for(option of opciones;track $index){
             <div class="border-0 rounded transition w-1/2  justify-center flex">
-                <div (click)="responder(option)"class=" respuesta text-2xl rounded border transition m-2 p-2 gap-2 w-1/2">
+                <button (click)="responder(option)"class=" respuesta text-2xl rounded border transition m-2 p-2 gap-2 w-1/2">
                     <h1>{{option}}</h1>
-                </div>
+                </button>
                 
             </div>
         }
