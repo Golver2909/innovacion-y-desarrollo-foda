@@ -1,5 +1,7 @@
 import { Component, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { Consignaservice } from '../../services/consigna';
+import { Consigna } from '../../models/consigna';
 
 @Component({
   selector: 'app-resultado',
@@ -10,11 +12,13 @@ import { CommonModule } from '@angular/common';
 })
 export class ResultadoComponent {
 
-  @Input() puntaje: number = 0;
+  @Input({ required: true }) puntaje!: number;
 
-  @Input() resultados: { id: number, correcto: boolean }[] = [];
+  @Input({ required: true }) resultados!: Consigna[];
 
-  @Input() erroresIds: number[] = [];
+  constructor(public servicioConsigna:Consignaservice){
+    
+  }
 
   obtenerMensaje(): string {
     if (this.puntaje === 10) return 'Excelente';

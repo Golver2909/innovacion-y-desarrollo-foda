@@ -1,0 +1,25 @@
+<div class="contenedor">
+
+  <div class="card">
+
+    <h2 class="titulo">Resultado</h2>
+
+    <p class="text-2xl">Puntaje: <strong>{{ puntaje }}</strong></p>
+    <p><strong class="text-2xl">{{ obtenerMensaje() }}</strong></p>
+
+    <div class="seccion">
+      <h3>Detalle de respuestas</h3>
+
+      <div *ngFor="let r of resultados"
+           class="item incorrecto">
+
+        Consigna: {{ r.detalle }}
+        <p class="text-white"> Respuesta correcta: <strong class="text-emerald-300">{{ r.respuesta }}</strong></p>
+        
+
+      </div>
+    </div>
+
+  </div>
+
+</div>
