@@ -1,5 +1,6 @@
 
 
+<!--
 <app-resultado 
 
   [puntaje]="8"
@@ -12,7 +13,40 @@
   
 
 ></app-resultado>
+-->
 
 
 
 
+<!-- <div class="app-container">
+  <header class="app-header">
+    <h1>{{ title }}</h1>
+    <p>Casos de emprendimiento y matriz FODA</p>
+  </header>
+
+  <main class="main-content">
+    <div class="controls">
+      <button (click)="actualizarConsignas()" class="btn-refresh">
+        🔄 Nueva selección de 10 consignas
+      </button>
+      <div class="stats">
+        <span>Total disponibles: {{ cantidadTotal }}</span>
+        <span>Mostrando: {{ consignas.length }}</span>
+      </div>
+    </div>
+    
+    <div class="consignas-grid">
+      <app-card-consigna *ngFor="let consigna of consignas" 
+        [consigna]="consigna"
+        (toggleRespuesta)="toggleRespuesta($event)">
+      </app-card-consigna>
+    </div>
+  </main>
+</div>
+ -->
+<main class="w-full flex flex-wrap justify-center text-center m-8">
+  
+    <router-outlet></router-outlet>
+  
+    
+</main>

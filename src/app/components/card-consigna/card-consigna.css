@@ -1,0 +1,106 @@
+.card-consigna {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border-radius: 16px;
+    padding: 24px;
+    margin-bottom: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    color: white;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+    &:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    }
+
+    .card-header {
+        h3 {
+            margin: 0 0 16px 0;
+            font-size: 1.4rem;
+            font-weight: 600;
+        }
+    }
+
+    .card-body {
+        .consigna-detalle {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 12px;
+            margin-bottom: 20px;
+            backdrop-filter: blur(10px);
+
+            h4 {
+                margin: 0 0 12px 0;
+                font-size: 1.1rem;
+                font-weight: 500;
+            }
+        }
+
+        .btn-container {
+            margin: 20px 0;
+            text-align: center;
+        }
+
+        .btn-toggle {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 50px;
+            font-size: 0.95rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: 500;
+            box-shadow: 0 4px 15px rgba(240, 147, 251, 0.4);
+
+            &.btn-show {
+                background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+                box-shadow: 0 4px 15px rgba(79, 172, 254, 0.4);
+            }
+
+            &.btn-hide {
+                background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
+                box-shadow: 0 4px 15px rgba(250, 112, 154, 0.4);
+            }
+
+            &:hover {
+                transform: translateY(-2px);
+                box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+            }
+
+            &:active {
+                transform: translateY(0);
+            }
+        }
+
+        .respuesta-reveal {
+            background: rgba(0, 0, 0, 0.2);
+            padding: 20px;
+            border-radius: 12px;
+            border-left: 4px solid #4facfe;
+            animation: reveal 0.5s ease-out;
+
+            @keyframes reveal {
+                from {
+                    opacity: 0;
+                    transform: translateY(20px);
+                }
+
+                to {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+            }
+
+            h5 {
+                margin: 0 0 12px 0;
+                color: #4facfe;
+                font-size: 1.1rem;
+            }
+
+            p {
+                margin: 0;
+                line-height: 1.6;
+            }
+        }
+    }
+}

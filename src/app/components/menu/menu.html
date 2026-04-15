@@ -1,0 +1,20 @@
+<div class="justify-center border border-gray-600 rounded-2xl flex flex-wrap w-full bg-gray-500 p-2 gap-2">
+
+    <div class="w-full text-center m-2">
+        <app-card-consigna 
+        [consigna]="consignas[posicion]"
+        [posicion]="numeroConsigna">
+      </app-card-consigna>
+        <!-- Seccion para mostrar componente de cards -->
+    </div>
+    <div class="w-full justify-center text-center flex flex-wrap m-2 ">
+        @for(option of opciones;track $index){
+            <div (click)="responder(option)" class="hover:bg-indigo-500 border-0 rounded transition w-1/2  justify-center flex">
+                <div class=" respuesta text-2xl rounded border transition m-2 p-2 gap-2 w-1/2">
+                    <h1>{{option}}</h1>
+                </div>
+                
+            </div>
+        }
+    </div>
+</div>
