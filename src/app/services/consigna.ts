@@ -26,7 +26,7 @@ export class Consignaservice {
     },
     {
       id: 4,
-      detalle: "Cafetería specialty coffee. Muchos catadores de café en la zona",
+      detalle: "Cafetería specialty coffee. Muchos catadores de café con mala fama en la zona.",
       respuesta: "Amenaza" /* "Curso SCA de catación nivel 1, alianza con tostadores locales, participación en cup of excellence." */,
       mostrarRespuesta: false
     },
