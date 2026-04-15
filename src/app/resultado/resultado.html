@@ -1,29 +1,37 @@
-<h2>Resultado</h2>
+<div class="contenedor">
 
-<p>Puntaje: {{ puntaje }}</p>
-<p>Mensaje: {{ obtenerMensaje() }}</p>
+  <div class="card">
 
-<hr>
+    <h2 class="titulo">Resultado</h2>
 
-<h3>Detalle de respuestas</h3>
+    <p>Puntaje: <strong>{{ puntaje }}</strong></p>
+    <p>Mensaje: <strong>{{ obtenerMensaje() }}</strong></p>
 
-<ul>
-  <li *ngFor="let r of resultados"
-      [ngClass]="r.correcto ? 'correcto' : 'incorrecto'">
+    <div class="seccion">
+      <h3>Detalle de respuestas</h3>
 
-    Pregunta {{ r.id }}:
-    {{ r.correcto ? 'Correcta' : 'Incorrecta' }}
+      <div *ngFor="let r of resultados"
+           class="item"
+           [ngClass]="r.correcto ? 'correcto' : 'incorrecto'">
 
-  </li>
-</ul>
+        Pregunta {{ r.id }}:
+        {{ r.correcto ? 'Correcta' : 'Incorrecta' }}
 
-<!-- OPCIONAL -->
-<div *ngIf="erroresIds.length > 0">
-  <h3>Explicaciones</h3>
+      </div>
+    </div>
 
-  <ul>
-    <li *ngFor="let id of erroresIds">
-      Pregunta {{ id }}: {{ explicaciones[id] }}
-    </li>
-  </ul>
+    <!-- EXPLICACIONES -->
+    <div *ngIf="erroresIds.length > 0" class="seccion">
+
+      <h3>Explicaciones</h3>
+
+      <div *ngFor="let id of erroresIds" class="explicacion">
+        <strong>Pregunta {{ id }}:</strong>
+        {{ explicaciones[id] }}
+      </div>
+
+    </div>
+
+  </div>
+
 </div>
