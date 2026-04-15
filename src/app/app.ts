@@ -9,13 +9,15 @@ import { Menu } from './components/menu/menu';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet,CardConsigna,FormsModule,CommonModule,Menu],
+  imports: [RouterOutlet,FormsModule,CommonModule],
 
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
 export class App {
   protected readonly title = signal('innovacion-y-desarrollo');
+
+  mostrarFinal:boolean = false
   
   consignas: Consigna[] = [];
   cantidadTotal = 0;
@@ -36,11 +38,11 @@ export class App {
     this.cargarConsignas();
   }
   
-  toggleRespuesta(id: number): void {
+  /* toggleRespuesta(id: boolean): void {
     const consigna = this.consignas.find(c => c.id === id);
     if (consigna) {
       consigna.mostrarRespuesta = !consigna.mostrarRespuesta;
     }
-  }
+  } */
 }
 

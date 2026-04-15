@@ -11,9 +11,11 @@ import { CommonModule } from '@angular/common';
 })
 export class CardConsigna {
   @Input({ required: true }) consigna!: Consigna;
-  @Output() toggleRespuesta = new EventEmitter<number>();
+  @Input({ required: true }) posicion!: number;
 
-  onToggleRespuesta(): void {
+  /* @Output() toggleRespuesta = new EventEmitter<number>(); */
+
+  /* onToggleRespuesta(): void {
     this.toggleRespuesta.emit(this.consigna.id);
-  }
+  } */
 }
