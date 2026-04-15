@@ -1,0 +1,27 @@
+<!-- src/app/components/card-consigna/card-consigna.component.html -->
+<div class="card-consigna">
+  <div class="card-header">
+    <h3>Consigna N°{{ posicion }}</h3>
+  </div>
+  <div class="card-body">
+    <div class="consigna-detalle">
+      <h4>{{ consigna.detalle }}</h4>
+    </div>
+    
+    <!-- <div class="btn-container">
+      <button 
+        class="btn-toggle" 
+        (click)="onToggleRespuesta()"
+        [ngClass]="{'btn-show': consigna.mostrarRespuesta, 'btn-hide': !consigna.mostrarRespuesta}">
+        {{ consigna.mostrarRespuesta ? '👁️ Ocultar solución' : '💡 Mostrar solución' }}
+      </button>
+    </div>
+
+    <div class="consigna-respuesta" *ngIf="consigna.mostrarRespuesta">
+      <div class="respuesta-reveal">
+        <h5>✅ Solución:</h5>
+        <p>{{ consigna.respuesta }}</p>
+      </div>
+    </div> -->
+  </div>
+</div>

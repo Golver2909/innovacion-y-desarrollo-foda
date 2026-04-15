@@ -1,0 +1,57 @@
+.contenedor {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #1e1e2f;
+  padding: 20px;
+}
+
+.card {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 16px;
+  padding: 25px;
+  width: 100%;
+  max-width: 500px;
+  color: white;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.titulo {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.seccion {
+  margin-top: 20px;
+}
+
+.correcto {
+  color: #4ade80;
+  font-weight: bold;
+}
+
+.incorrecto {
+  color: #f87171;
+  font-weight: bold;
+}
+
+.item {
+  margin: 5px 0;
+  padding: 8px;
+  border-radius: 8px;
+  background: rgba(255,255,255,0.1);
+}
+
+.explicacion {
+  background: rgba(0,0,0,0.2);
+  padding: 10px;
+  border-left: 4px solid #4facfe;
+  border-radius: 8px;
+  margin-top: 10px;
+}

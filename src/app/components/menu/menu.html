@@ -1,0 +1,36 @@
+@if(!mostrarFinal){
+    <div class="w-full bg-gray-700 border-0 rounded-2xl m-4 p-2 gap-2">
+        <h1 class="text-3xl w-full">¡Bienvenido al juego!</h1>
+        <p>
+        El objetivo de este juego es repasar diferentes casos y poder reconocer en que parte de la matriz estarian contemplados.
+        </p>
+    </div>
+    
+    <div class="justify-center border border-gray-600 rounded-2xl flex flex-wrap w-full bg-gray-500 p-2 gap-2">
+
+    <div class="w-full text-center m-2">
+        <app-card-consigna 
+        [consigna]="consignas[posicion]"
+        [posicion]="numeroConsigna">
+      </app-card-consigna>
+        <!-- Seccion para mostrar componente de cards -->
+    </div>
+    <div class="w-full justify-center text-center flex flex-wrap m-2 text-gray-950">
+        @for(option of opciones;track $index){
+            <div class="border-0 rounded transition w-1/2  justify-center flex">
+                <div (click)="responder(option)"class=" respuesta text-2xl rounded border transition m-2 p-2 gap-2 w-1/2">
+                    <h1>{{option}}</h1>
+                </div>
+                
+            </div>
+        }
+    </div>
+</div>
+}@else{
+<app-resultado
+[resultados]="consignasIncorrectas"
+[puntaje]="consignasCorrectas"></app-resultado>
+
+<button (click)="reinicio()" class="w-full text-3xl m-2 p-2 border-0 rounded-2xl respuesta"> Volver a empezar </button>
+}
+
