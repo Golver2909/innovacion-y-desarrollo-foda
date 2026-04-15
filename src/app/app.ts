@@ -5,12 +5,12 @@ import { Consigna } from './models/consigna';
 import { Consignaservice } from './services/consigna';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
-import { Inicial } from './pages/inicial/inicial';
+import { Menu } from './components/menu/menu';
 
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet,FormsModule,CommonModule,Inicial],
+  imports: [RouterOutlet,FormsModule,CommonModule,Menu],
 
   templateUrl: './app.html',
   styleUrl: './app.css'
